@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+backend/node_modules/
+mobile/node_modules/
+
+# Base de datos y archivos subidos (no deben ir al repo)
+backend/db/*.db
+backend/db/*.db-journal
+backend/db/*.db-wal
+backend/db/*.db-shm
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Expo / React Native
+mobile/.expo/
+mobile/.expo-shared/
+mobile/dist/
+mobile/web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Logs y sistema
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env
