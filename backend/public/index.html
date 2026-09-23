@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Link Transfer - Panel PC</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🔗 Link Transfer</h1>
+    <div id="connStatus" class="status disconnected">Desconectado</div>
+  </header>
+
+  <main class="layout">
+    <!-- Panel de emparejamiento -->
+    <section class="card pairing-card" id="pairingCard">
+      <h2>Emparejar celular</h2>
+      <p>Escanea este código QR desde la app móvil, o ingresa el PIN manualmente.</p>
+      <img id="qrImage" alt="Código QR de emparejamiento" />
+      <div class="pin-box">
+        PIN: <span id="pinValue">----</span>
+      </div>
+      <button id="regenBtn">Regenerar código</button>
+    </section>
+
+    <!-- Chat -->
+    <section class="card chat-card">
+      <h2>Chat</h2>
+      <div id="chatMessages" class="chat-messages"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Escribe un mensaje..." autocomplete="off" />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Archivos -->
+    <section class="card files-card">
+      <h2>Archivos</h2>
+      <form id="uploadForm" class="upload-form">
+        <input id="fileInput" type="file" />
+        <button type="submit">Subir al celular</button>
+      </form>
+      <ul id="filesList" class="files-list"></ul>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

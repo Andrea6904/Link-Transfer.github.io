@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Link Transfer",
+    "slug": "link-transfer-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite el acceso a la cámara para escanear el código QR de emparejamiento."
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.linktransfer.mobile",
+      "permissions": ["CAMERA", "INTERNET"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.linktransfer.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Se usa para escanear el código QR de emparejamiento."
+      }
+    }
+  }
+}
